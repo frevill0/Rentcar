@@ -3,12 +3,12 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const rentaSchema = new Schema({
-  Vehiculo: {
+  vehiculo: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Vehiculo',
     required: true
   },
-  Cliente: {
+  cliente: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Cliente',
     required: true

@@ -31,7 +31,7 @@ export const crearRenta = async (req, res) => {
 // Obtener todas las reservas
 export const obtenerTodasRentas = async (req, res) => {
   try {
-    const renta = await Renta.find().populate('renta auditorio');
+    const renta = await Renta.find()
     res.json(renta);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -43,7 +43,7 @@ export const obtenerRentaPorId = async (req, res) => {
   try {
     const { id } = req.params;
 
-    const renta = await Renta.findById(id).populate('renta auditorio');
+    const renta = await Renta.findById(id);
     if (!renta) return res.status(404).json({ message: 'Reserva no encontrada' });
 
     res.json(renta);

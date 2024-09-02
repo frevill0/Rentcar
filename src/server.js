@@ -25,7 +25,7 @@ app.use(express.json());
 
 // Rutas
 app.use('/rentcar', adminRoutes);
-app.use('/rentcar',vehiculoRoutes);
+app.use('/rentcar',autenticar, vehiculoRoutes);
 app.use('/rentcar',autenticar, rentaRoutes);
 app.use('/rentcar',autenticar, clienteRoutes);
 
